@@ -23,12 +23,14 @@ class EstudanteService
 
     public function getInfoForIndexView()
     {
+        $estudantes = $this->estudanteRepository->findAll();
+
         $title = "Estudante";
         $menu = "Estudante";
         $submenu = "Listar";
         $type = "estudantes";
 
-        return compact('title', 'menu', 'submenu', 'type');
+        return compact('title', 'menu', 'submenu', 'type', 'estudantes');
     }
 
     public function getInfoForCreateView()
