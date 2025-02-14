@@ -1,7 +1,13 @@
 @extends('layouts.app')
 @section('content')
 <a href="/estudantes/create">Novo Estudante</a>
-    <table border="1" width="50%">
+    <table border="1" width="50%" 
+        style="
+            color:red; 
+            background-color: yellow;
+            text-align: center;
+            
+        ">
         <thead>
             <tr>
                 <th>Nome</th>
