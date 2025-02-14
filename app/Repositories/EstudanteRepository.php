@@ -20,7 +20,7 @@ class EstudanteRepository implements CRUDInterface
     }
     public function findOrFail(string $id)
     {
-        return $this->findOrFail($id);
+        return $this->model->findOrFail($id);
     }
     public function create(array $data)
     {

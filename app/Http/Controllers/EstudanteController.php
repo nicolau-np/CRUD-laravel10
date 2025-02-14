@@ -41,7 +41,6 @@ class EstudanteController extends Controller
      */
     public function store(EstudanteStoreRequest $estudanteStoreRequest)
     {
-        dd($estudanteStoreRequest->all());
         $response = $this->estudanteService->store($estudanteStoreRequest->all());
         if ($response) {
             return back()->with('success', "feito com sucesso");
@@ -74,7 +73,7 @@ class EstudanteController extends Controller
      */
     public function update(EstudanteUpdateRequest $estudanteUpdateRequest, string $id)
     {
-        $response = $this->estudanteService->store($estudanteUpdateRequest->all(), $id);
+        $response = $this->estudanteService->update($estudanteUpdateRequest->all(), $id);
         if ($response) {
             return back()->with('success', "feito com sucesso");
         }

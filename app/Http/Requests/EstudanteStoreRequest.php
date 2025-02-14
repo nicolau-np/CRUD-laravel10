@@ -24,7 +24,7 @@ class EstudanteStoreRequest extends FormRequest
         return [
             'nome'=>'required|string',
             'data_de_nascimento'=>'required|date',
-            'turma',
+            'turma'=>'required|string',
         ];
     }
 

@@ -58,6 +58,7 @@ class EstudanteService
     public function getInfoForEditView(string $id)
     {
         $estudante = $this->estudanteRepository->findOrFail($id);
+        
 
         $title = "Estudante";
         $menu = "Estudante";
@@ -82,7 +83,7 @@ class EstudanteService
         return DB::transaction(function () use ($pessoaData, $estudanteData) {
             $pessoa = $this->pessoaRepository->create($pessoaData);
             $estudanteData['pessoa_id'] = $pessoa->id;
-            $this->estudanteRepository->create($estudanteData);
+            return $this->estudanteRepository->create($estudanteData);
         });
     }
 
