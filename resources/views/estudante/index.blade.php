@@ -6,7 +6,7 @@
             color:red; 
             background-color: yellow;
             text-align: center;
-            
+
         ">
         <thead>
             <tr>
